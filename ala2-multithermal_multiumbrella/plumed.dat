@@ -1,5 +1,12 @@
 # vim:ft=plumed
 
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++#
+#                                                                            #
+#  This input generates a multicanonical and multiumbrella simulation that   #
+#  samples both along the phi angle and in the temperature range 300K-1000K  #
+#                                                                            #
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++#
+
 phi: TORSION ATOMS=5,7,9,15
 psi: TORSION ATOMS=7,9,15,17
 ene: ENERGY
@@ -12,3 +19,5 @@ PRINT FMT=%g STRIDE=500 FILE=Colvar.data ARG=phi,psi,ene,opes.bias
 
 ENDPLUMED
 
+The total number fo DeltaFs to be estimated is 43x4=172 .
+The resulting trajectory can be reweighted at any temperature in the range.

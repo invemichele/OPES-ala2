@@ -1,5 +1,12 @@
 # vim:ft=plumed
 
+#+++++++++++++++++++++++++++++++++++++++++++++++++++#
+#                                                   #
+#  This input generates a well-tempered simulation  #
+#  that samples along the phi collective variable   #
+#                                                   #
+#+++++++++++++++++++++++++++++++++++++++++++++++++++#
+
 phi: TORSION ATOMS=5,7,9,15
 psi: TORSION ATOMS=7,9,15,17
 ene: ENERGY
@@ -18,3 +25,7 @@ PRINT FMT=%g STRIDE=500 FILE=Colvar.data ARG=phi,psi,ene,opes.bias,opes.rct,opes
 
 ENDPLUMED
 
+If no SIGMA is provided, it will be automatically guessed.
+The option NLIST activates a neghbor list that speeds up the computation.
+
+The main advantage of using OPES_METAD over a multiumbrella OPES_EXPANDED is that it is much easier to handle multiple collective variables.

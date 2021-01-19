@@ -1,5 +1,12 @@
 # vim:ft=plumed
 
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++#
+#                                                                 #
+#  This input generates a multicanonical simulation that samples  #
+#  the temperature range 300K-1000K in a single simulation        #
+#                                                                 #
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++#
+
 phi: TORSION ATOMS=5,7,9,15
 psi: TORSION ATOMS=7,9,15,17
 ene: ENERGY
@@ -11,3 +18,5 @@ PRINT FMT=%g STRIDE=500 FILE=Colvar.data ARG=phi,psi,ene,opes.bias
 
 ENDPLUMED
 
+If the number of STEPS_TEMP is not provided, it will be automatically guessed.
+The resulting trajectory can be reweighted at any temperature in the range.
