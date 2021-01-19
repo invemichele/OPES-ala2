@@ -1,0 +1,20 @@
+# vim:ft=plumed
+
+phi: TORSION ATOMS=5,7,9,15
+psi: TORSION ATOMS=7,9,15,17
+ene: ENERGY
+
+opes: OPES_METAD ...
+  ARG=phi
+  FILE=Kernels.data
+  PACE=500
+  BARRIER=50
+  SIGMA=0.15
+  STATE_WFILE=State.data
+  NLIST
+...
+
+PRINT FMT=%g STRIDE=500 FILE=Colvar.data ARG=phi,psi,ene,opes.bias,opes.rct,opes.zed,opes.nker
+
+ENDPLUMED
+

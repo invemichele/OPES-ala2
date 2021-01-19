@@ -1,0 +1,13 @@
+# vim:ft=plumed
+
+phi: TORSION ATOMS=5,7,9,15
+psi: TORSION ATOMS=7,9,15,17
+ene: ENERGY
+
+ecv: ECV_UMBRELLAS_LINE ARG=phi MIN_CV=-pi MAX_CV=pi SIGMA=0.15 BARRIER=50
+opes: OPES_EXPANDED ARG=ecv.* PACE=500 FILE=DeltaFs.data STATE_WFILE=State.data
+
+PRINT FMT=%g STRIDE=500 FILE=Colvar.data ARG=phi,psi,ene,opes.bias
+
+ENDPLUMED
+
