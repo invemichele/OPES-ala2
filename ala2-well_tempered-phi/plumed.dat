@@ -26,6 +26,6 @@ PRINT FMT=%g STRIDE=500 FILE=Colvar.data ARG=phi,psi,ene,opes.bias,opes.rct,opes
 ENDPLUMED
 
 If no SIGMA is provided, it will be automatically guessed.
-The option NLIST activates a neghbor list that speeds up the computation.
+The option NLIST activates a neighbor list that speeds up the computation.
 
 The main advantage of using OPES_METAD over a multiumbrella OPES_EXPANDED is that it is much easier to handle multiple collective variables.
