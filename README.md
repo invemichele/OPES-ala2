@@ -4,4 +4,4 @@ This repository contains all the input files and data to reproduce the figures o
 
 These are simple examples of different OPES target distributions, using alanine dipeptide in vacuum.
 
-Software used: Gromacs2018, Plumed2.8 (activate OPES module)
+The software used is GROMACS 2018 and PLUMED 2.8 (with OPES module enabled)
