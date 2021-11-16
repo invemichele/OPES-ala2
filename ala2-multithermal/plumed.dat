@@ -11,12 +11,12 @@ phi: TORSION ATOMS=5,7,9,15
 psi: TORSION ATOMS=7,9,15,17
 ene: ENERGY
 
-ecv: ECV_MULTITHERMAL ARG=ene MAX_TEMP=1000 STEPS_TEMP=4
+ecv: ECV_MULTITHERMAL ARG=ene TEMP_MAX=1000 TEMP_STEPS=4
 opes: OPES_EXPANDED ARG=ecv.* PACE=500 FILE=DeltaFs.data STATE_WFILE=State.data
 
 PRINT FMT=%g STRIDE=500 FILE=Colvar.data ARG=phi,psi,ene,opes.bias
 
 ENDPLUMED
 
-If the number of STEPS_TEMP is not provided, it will be automatically guessed.
+If the number of TEMP_STEPS is not provided, it will be automatically guessed.
 The resulting trajectory can be reweighted at any temperature in the range.
