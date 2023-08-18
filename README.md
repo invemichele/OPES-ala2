@@ -6,7 +6,7 @@ These are simple examples of different OPES target distributions, using alanine 
 
 The software used is GROMACS 2018 and PLUMED 2.8 (with [OPES module](https://www.plumed.org/doc-master/user-doc/html/_o_p_e_s.html) enabled)
 
-```
+```bibtex
 @article{Invernizzi2021,
 	title = {{OPES}: On-the-fly Probability Enhanced Sampling Method},
 	author = {Invernizzi, Michele},
