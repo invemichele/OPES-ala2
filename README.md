@@ -8,7 +8,7 @@ The software used is GROMACS 2018 and PLUMED 2.8 (with [OPES module](https://www
 
 ```bibtex
 @article{Invernizzi2021,
-	title = {{OPES}: On-the-fly Probability Enhanced Sampling Method},
+	title = {OPES: On-the-fly Probability Enhanced Sampling Method},
 	author = {Invernizzi, Michele},
 	journal = {Il Nuovo Cimento C},
 	year = {2021},
