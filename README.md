@@ -19,3 +19,6 @@ The software used is GROMACS 2018 and PLUMED 2.8 (with [OPES module](https://www
 	url = {http://arxiv.org/abs/2101.06991}
 }
 ```
+
+## Tutorial
+For a more recent introduction to the OPES method see this [PLUMED masterclass](https://www.plumed.org/doc-master/user-doc/html/masterclass-22-03.html) (git repo [here](https://github.com/invemichele/masterclass-22-03/tree/master)).
